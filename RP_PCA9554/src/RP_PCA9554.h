@@ -51,18 +51,13 @@ public:
 	uint8_t digitalReadBuf(uint8_t pin);					          //call to read the specified pin, call "ReadBufUpdate" first to ensure an actual level (faster, only read once)
 	uint8_t digitalRead(uint8_t pin);						            //call to read the desired pin level immediately
 	uint8_t readPortA(void);								                //returns the actual PortA level
-	//uint8_t readPortB(void);								                //returns the actual PortB level
 
 
 private:
   uint8_t _i2caddr;										                    //holds the i2c address of PCA9554
 	uint8_t _cfgPort0Direction;								
-	//uint8_t _cfgPort1Direction;
 	uint8_t _cfgPort0Level;
-	//uint8_t _cfgPort1Level;
 	uint8_t _inPort0Level;
-	//uint8_t _inPort1Level;
-
 };
 
  /* RP_PCA9554_H_ */
